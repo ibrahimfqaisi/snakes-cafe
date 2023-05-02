@@ -69,7 +69,6 @@ def main():
                             name ="{}".format(user_input)
                             order=""
                             my_count[name] += 1
-                            print (my_count[name])
                             for x in  my_count :
                                 if order == "" :
                                     order = " {} order of {} ".format( my_count[x], x )    
@@ -85,7 +84,6 @@ def main():
                                 order = " {} order of {} ".format( my_count[name] ,user_input)
                                 print("**{}has been added to your meal **".format(order))
                                 thislist.append(user_input)
-                                print (thislist)
                             else:
                                 name ="{}".format(user_input)
                                 my_count[name] = 1
@@ -94,9 +92,8 @@ def main():
                                 thislist.append(user_input)
                         #TODO: handle the order numbers
                     
-            if check == 1:
-                print("it work")
-            else:
+            if check == 0:
+               
                 print("sorry we dont have this item !")
             user_input = user_insertion()    
 
