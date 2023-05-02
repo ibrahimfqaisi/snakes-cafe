@@ -55,18 +55,13 @@ def main():
     thislist = [] 
     my_count = {}
     while(user_input.lower() != "quit"):
-        
-        # if user_input.lower() == "quit":
-        #     end_application()
             check=0 
-             
             for y in menu.values():
                 for x in y:
                     if user_input == x:
                         check = 1
                         if x in thislist :
-                            
-                            name ="{}".format(user_input)
+                            name =user_input
                             order=""
                             my_count[name] += 1
                             for x in  my_count :
@@ -78,25 +73,20 @@ def main():
                             check=1
                         else:
                             if thislist ==[]:
-                                
-                                name ="{}".format(user_input)
+                                name =user_input
                                 my_count[name] = 1
                                 order = " {} order of {} ".format( my_count[name] ,user_input)
                                 print("**{}has been added to your meal **".format(order))
                                 thislist.append(user_input)
                             else:
-                                name ="{}".format(user_input)
+                                name =user_input
                                 my_count[name] = 1
                                 order = " {} order of {} and {}".format( my_count[name] ,user_input,order)
                                 print("**{}has been added to your meal **".format(order))
                                 thislist.append(user_input)
-                        #TODO: handle the order numbers
-                    
             if check == 0:
-               
                 print("sorry we dont have this item !")
             user_input = user_insertion()    
-
     end_application()
 
 
